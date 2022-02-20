@@ -1,7 +1,7 @@
 // Assignment code here
 
 
-
+const ran
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -20,10 +20,10 @@ function writePassword() {
 function generatePassword() {
 
   passwordLength(); 
-  numberSet();
-  specialSet();
-  lowerSet();
-  upperSet();
+  number();
+  special();
+  lower();
+  upper();
 
 
   //INDIVIDUAL FUNCTIONS FOR PASSWORD
@@ -50,28 +50,29 @@ function generatePassword() {
 
   //NUMBER PASSWORD FUNCTION
 
-  function numberSet(){
+  function number(){
     var numberSet = window.confirm('Would you like to have numbers?');
+   
     
-  };
+  }
 
   //SPECIAL PASSWORD FUNCTION
 
-  function specialSet(){
+  function special(){
     var specialSet = window.confirm('Would you like special characters for your special password?');
 
   }
 
   //LOWER PASSWORD FUNCTION
 
-  function lowerSet(){
+  function lower(){
     var lowerSet = window.confirm('Would you like lowercase letters?');
-
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
   }
-
+console.log(lower)
   //UPPER PASSWORD FUNCTION
-  
-  function upperSet(){
+
+  function upper(){
     var upperSet = window.confirm('Would you like upercase letters?');
 
   }
