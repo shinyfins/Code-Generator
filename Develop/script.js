@@ -15,13 +15,18 @@ function writePassword() {
   passwordText.value = password;
 
 }
+//BEGIN OF MAIN FUNCTION
 
 function generatePassword() {
 
   passwordLength(); 
   numberSet();
   specialSet();
+  lowerSet();
+  upperSet();
 
+
+  //INDIVIDUAL FUNCTIONS FOR PASSWORD
   function passwordLength(){
     var promptLength = window.prompt('From 8 to 128 how many characters do you want?');
     if (promptLength < 8){
@@ -42,17 +47,34 @@ function generatePassword() {
 
   };
 
+
+  //NUMBER PASSWORD FUNCTION
+
   function numberSet(){
     var numberSet = window.confirm('Would you like to have numbers?');
     
   };
+
+  //SPECIAL PASSWORD FUNCTION
 
   function specialSet(){
     var specialSet = window.confirm('Would you like special characters for your special password?');
 
   }
 
+  //LOWER PASSWORD FUNCTION
+
+  function lowerSet(){
+    var lowerSet = window.confirm('Would you like lowercase letters?');
+
+  }
+
+  //UPPER PASSWORD FUNCTION
   
+  function upperSet(){
+    var upperSet = window.confirm('Would you like upercase letters?');
+
+  }
 
 }
 
