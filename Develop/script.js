@@ -1,5 +1,7 @@
 // Assignment code here
 
+var generateBtn = document.querySelector("#generate");
+
 function generatePassword() {
 
 var allLowerCases = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",  "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -13,27 +15,14 @@ var allSpecial = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "{", "}", "[
 
 
 
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-
-  passwordText.value = password;
-
-}
 //BEGIN OF MAIN FUNCTION
+  
 
 
+//RESULTS LOGED
+var results = [];
+var resultsTotal = [];
 
-  passwordLength(); 
-  number();
-  special();
-  lower();
-  upper();
 
 
   //LENGTH START
@@ -75,10 +64,41 @@ function writePassword() {
  //END HOUSE OF PROMPTS
 
 
-  //HOUSE OF CONDITIONS
- 
+ //HOUSE OF CONDITIONS
 
- 
+ if (lower){
+    results = results.concat(allLowerCases);
+ }
+
+ if (upper){
+   results = results.concat(allUpperCases);
+ }
+
+ if (number) {
+   results = results.concat(allNumbers);
+ }
+
+ if (special){
+   results = results.concat(allSpecial);
+ }
+
+
+ for (var i=0; i < promptLength; i++) {
+
+   resultsTotal.push (results [Math.floor(Math.random() * resultsTotal.length)]);
+
+   return resultsTotal.join("") ;
+ }
+
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+
+  passwordText.value = password;
+}
  console.log
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
