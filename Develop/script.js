@@ -15,7 +15,32 @@ function writePassword() {
   passwordText.value = password;
 
 }
- sign = window.prompt('Would you like upper case?');
+
+function generatePassword() {
+
+  passwordLength(); 
+
+  function passwordLength(){
+    var promptLength = window.prompt('From 8 to 128 how many characters do you want?');
+    if (promptLength < 8){
+      window.alert ('Not enough characters please choose a valid number.') 
+      generatePassword();
+    } 
+    
+    else if (promptLength > 128){
+      window.alert ('To many characters choose less!')
+      generatePassword();
+    }
+
+    else if (isNaN(promptLength)){
+      window.alert ('Thats not a number!')
+      generatePassword();
+    }
+   console.log(promptLength)
+
+  };
+
+}
 
  
  console.log
