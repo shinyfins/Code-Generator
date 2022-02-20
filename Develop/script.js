@@ -36,22 +36,22 @@ function writePassword() {
   upper();
 
 
-  //INDIVIDUAL FUNCTIONS FOR PASSWORD
+  //LENGTH START
 
     var promptLength = window.prompt('From 8 to 128 how many characters do you want?');
 
     if (promptLength < 8){
-      window.alert ('Not enough characters please choose a valid number.') 
+      window.alert ('The minimum length is 8 characters. Please choose a higher number. ⏫') 
       generatePassword();
     } 
     
     else if (promptLength > 128){
-      window.alert ('To many characters choose less!')
+      window.alert ('The maximum length is 128 characters. Please choose a lower number. ⏬')
       generatePassword();
     }
 
     else if (isNaN(promptLength)){
-      window.alert ('Thats not a number!')
+      window.alert ('Thats not a number! 👹')
       generatePassword();
     }
     
@@ -59,55 +59,24 @@ function writePassword() {
     else {
       promptLength = promptLength;
     }
-    
+
     console.log(promptLength);
 
-  //NUMBER PASSWORD FUNCTION
 
- 
-    var numberSet = window.confirm('Would you like to have numbers?');
-   
-    if (true){
-     
-    }
+  //LENGTH SECTION HAS ENDED
 
-    console.log(numberSet)
-  }
-
-  //SPECIAL PASSWORD FUNCTION
-
-  function special(){
-    var specialSet = window.confirm('Would you like special characters for your special password?');
-    if (true){
-
-    }
-
-    console.log(specialSet)
-  }
-
-  //LOWER PASSWORD FUNCTION
-
-  function lower(){
-    var lowerSet = window.confirm('Would you like lowercase letters?');
-    if (true){
-      
-    }
- 
-    console.log(lowerSet)
-  }
-
-  //UPPER PASSWORD FUNCTION
-
-  function upper(){
-    var upperSet = window.confirm('Would you like upercase letters?');
-    if (true){
-
-    }
+  //HOUSE OF PROMPTS
   
-    console.log(upperSet)
-  }
+  var lower = confirm ("Would you like any lowercase 🔤");
+  var upper = confirm ("Would you like any upper case letters? 🔠");
+  var number = confirm ("Would you like any numbers? 💯");
+  var special = confirm ("Would you like special characters in your special password? ✨");
 
-}
+ //END HOUSE OF PROMPTS
+
+
+  //HOUSE OF CONDITIONS
+ 
 
  
  console.log
