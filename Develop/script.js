@@ -1,7 +1,7 @@
 // Assignment code here
 
 
-const ran
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -43,8 +43,7 @@ function generatePassword() {
       window.alert ('Thats not a number!')
       generatePassword();
     }
-   console.log(promptLength)
-
+    console.log(promptLength)
   };
 
 
@@ -53,28 +52,56 @@ function generatePassword() {
   function number(){
     var numberSet = window.confirm('Would you like to have numbers?');
    
+    if (numberSet == true){
+    Math.floor(Math.random() * 10 );
+ 
+    }
+
+    else if (numberSet == false){
     
+    }
+    console.log(numberSet)
   }
 
   //SPECIAL PASSWORD FUNCTION
 
   function special(){
     var specialSet = window.confirm('Would you like special characters for your special password?');
+    if (specialSet == true){
 
+    }
+
+    else if (specialSet == false){
+
+    }
+    console.log(specialSet)
   }
 
   //LOWER PASSWORD FUNCTION
 
   function lower(){
     var lowerSet = window.confirm('Would you like lowercase letters?');
-    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+    if (lowerSet == true){
+      
+    }
+    
+    else if (lowerSet == false){
+
+    }
+    console.log(lowerSet)
   }
-console.log(lower)
+
   //UPPER PASSWORD FUNCTION
 
   function upper(){
     var upperSet = window.confirm('Would you like upercase letters?');
+    if (upperSet == true){
 
+    }
+    else if (upperSet == false){
+
+    }
+    console.log(upperSet)
   }
 
 }
