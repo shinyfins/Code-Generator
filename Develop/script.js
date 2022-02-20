@@ -1,6 +1,16 @@
 // Assignment code here
 
 
+function passWordStrength(){
+var allLowerCases = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",  "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+var allUpperCases = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+var allNumbers = Math.floor(Math.random() * 10 );
+
+var allSpecial = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "{", "}", "[", "]", "=", "<", ">", "/", ",", ".", ";", ":", "-", "+", "?", "~", "`", "|", "_", "'"];
+}
+
 
 
 // Get references to the #generate element
@@ -53,13 +63,9 @@ function generatePassword() {
     var numberSet = window.confirm('Would you like to have numbers?');
    
     if (true){
-    Math.floor(Math.random() * 10 );
- 
+     
     }
 
-    else if (false){
-    
-    }
     console.log(numberSet)
   }
 
@@ -71,9 +77,6 @@ function generatePassword() {
 
     }
 
-    else if (false){
-
-    }
     console.log(specialSet)
   }
 
@@ -84,10 +87,7 @@ function generatePassword() {
     if (true){
       
     }
-    
-    else if (false){
-
-    }
+ 
     console.log(lowerSet)
   }
 
@@ -98,9 +98,7 @@ function generatePassword() {
     if (true){
 
     }
-    else if (false){
-
-    }
+  
     console.log(upperSet)
   }
 
