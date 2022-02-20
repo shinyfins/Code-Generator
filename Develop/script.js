@@ -52,12 +52,12 @@ function generatePassword() {
   function number(){
     var numberSet = window.confirm('Would you like to have numbers?');
    
-    if (numberSet == true){
+    if (true){
     Math.floor(Math.random() * 10 );
  
     }
 
-    else if (numberSet == false){
+    else if (false){
     
     }
     console.log(numberSet)
@@ -67,11 +67,11 @@ function generatePassword() {
 
   function special(){
     var specialSet = window.confirm('Would you like special characters for your special password?');
-    if (specialSet == true){
+    if (true){
 
     }
 
-    else if (specialSet == false){
+    else if (false){
 
     }
     console.log(specialSet)
@@ -81,11 +81,11 @@ function generatePassword() {
 
   function lower(){
     var lowerSet = window.confirm('Would you like lowercase letters?');
-    if (lowerSet == true){
+    if (true){
       
     }
     
-    else if (lowerSet == false){
+    else if (false){
 
     }
     console.log(lowerSet)
@@ -95,10 +95,10 @@ function generatePassword() {
 
   function upper(){
     var upperSet = window.confirm('Would you like upercase letters?');
-    if (upperSet == true){
+    if (true){
 
     }
-    else if (upperSet == false){
+    else if (false){
 
     }
     console.log(upperSet)
