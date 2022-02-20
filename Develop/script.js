@@ -1,12 +1,12 @@
 // Assignment code here
 
+function generatePassword() {
 
-function passWordStrength(){
 var allLowerCases = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",  "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 var allUpperCases = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-var allNumbers = Math.floor(Math.random() * 10 );
+var allNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 var allSpecial = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "{", "}", "[", "]", "=", "<", ">", "/", ",", ".", ";", ":", "-", "+", "?", "~", "`", "|", "_", "'"];
 }
@@ -27,7 +27,7 @@ function writePassword() {
 }
 //BEGIN OF MAIN FUNCTION
 
-function generatePassword() {
+
 
   passwordLength(); 
   number();
@@ -37,8 +37,9 @@ function generatePassword() {
 
 
   //INDIVIDUAL FUNCTIONS FOR PASSWORD
-  function passwordLength(){
+
     var promptLength = window.prompt('From 8 to 128 how many characters do you want?');
+
     if (promptLength < 8){
       window.alert ('Not enough characters please choose a valid number.') 
       generatePassword();
@@ -53,13 +54,17 @@ function generatePassword() {
       window.alert ('Thats not a number!')
       generatePassword();
     }
-    console.log(promptLength)
-  };
-
+    
+ 
+    else {
+      promptLength = promptLength;
+    }
+    
+    console.log(promptLength);
 
   //NUMBER PASSWORD FUNCTION
 
-  function number(){
+ 
     var numberSet = window.confirm('Would you like to have numbers?');
    
     if (true){
