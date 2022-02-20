@@ -19,6 +19,8 @@ function writePassword() {
 function generatePassword() {
 
   passwordLength(); 
+  numberSet();
+  specialSet();
 
   function passwordLength(){
     var promptLength = window.prompt('From 8 to 128 how many characters do you want?');
@@ -39,6 +41,18 @@ function generatePassword() {
    console.log(promptLength)
 
   };
+
+  function numberSet(){
+    var numberSet = window.confirm('Would you like to have numbers?');
+    
+  };
+
+  function specialSet(){
+    var specialSet = window.confirm('Would you like special characters for your special password?');
+
+  }
+
+  
 
 }
 
