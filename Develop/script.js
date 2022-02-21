@@ -2,7 +2,11 @@
 
 var generateBtn = document.querySelector("#generate");
 
+//BEGIN OF MAIN FUNCTION
+
 function generatePassword() {
+
+  //VARIABLES FOR OPTIONS
 
 var allLowerCases = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",  "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
@@ -11,39 +15,34 @@ var allUpperCases = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
 var allNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 var allSpecial = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "{", "}", "[", "]", "=", "<", ">", "/", ",", ".", ";", ":", "-", "+", "?", "~", "`", "|", "_", "'"];
-}
 
+//VARIABLE OPTIONS ARRAYS END
 
+//RESULTS LOGGED
 
-//BEGIN OF MAIN FUNCTION
-  
-
-
-//RESULTS LOGED
-var results = [];
 var resultsTotal = [];
+var resultsTotaluser = [];
 
-
+//RESULT LOGGER END
 
   //LENGTH START
 
     var promptLength = window.prompt('From 8 to 128 how many characters do you want?');
 
-    if (promptLength < 8){
-      window.alert ('The minimum length is 8 characters. Please choose a higher number. ⏫') 
-      generatePassword();
+    if (promptLength < 8) {
+      window.alert ('The minimum length is 8 characters. Please choose a higher number. ⏫'); 
+      passwordGen();
     } 
     
-    else if (promptLength > 128){
-      window.alert ('The maximum length is 128 characters. Please choose a lower number. ⏬')
-      generatePassword();
+    else if (promptLength > 128) {
+      window.alert ('The maximum length is 128 characters. Please choose a lower number. ⏬');
+      passwordGen();
     }
 
-    else if (isNaN(promptLength)){
-      window.alert ('Thats not a number! 👹')
-      generatePassword();
+    else if (isNaN(promptLength)) {
+      window.alert ('Thats not a number! 👹');
+      passwordGen();
     }
-    
  
     else {
       promptLength = promptLength;
@@ -67,28 +66,30 @@ var resultsTotal = [];
  //HOUSE OF CONDITIONS
 
  if (lower){
-    results = results.concat(allLowerCases);
+  resultsTotal = resultsTotal.concat(allLowerCases);
  }
 
  if (upper){
-   results = results.concat(allUpperCases);
+  resultsTotal = resultsTotal.concat(allUpperCases);
  }
 
  if (number) {
-   results = results.concat(allNumbers);
+  resultsTotal = resultsTotal.concat(allNumbers);
  }
 
  if (special){
-   results = results.concat(allSpecial);
+  resultsTotal = resultsTotal.concat(allSpecial);
  }
+ console.log(resultsTotal)
 
 
- for (var i=0; i < promptLength; i++) {
+ for (var i = 0; i < promptLength; i++) {
 
-   resultsTotal.push (results [Math.floor(Math.random() * resultsTotal.length)]);
+  resultsTotaluser.push (resultsTotal[Math.floor(Math.random() * resultsTotal.length)]);
+} 
 
-   return resultsTotal.join("") ;
- }
+   return resultsTotaluser.join("") ;
+}
 
 
 // Write password to the #password input
@@ -99,6 +100,6 @@ function writePassword() {
 
   passwordText.value = password;
 }
- console.log
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
